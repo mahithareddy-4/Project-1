@@ -4,9 +4,11 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 # Set page configuration
-st.set_page_config(page_title="Health Assistant",
-                   layout="wide",
-                   page_icon="🧑‍⚕️")
+st.set_page_config(
+    page_title="Healthcare Disease Prediction System",
+    layout="wide",
+    page_icon="🩺"
+)
 
     
 # getting the working directory of the main.py
@@ -22,7 +24,7 @@ parkinsons_model = pickle.load(open(f'{working_dir}/saved_models/parkinsons_mode
 
 # sidebar for navigation
 with st.sidebar:
-    selected = option_menu('Multiple Disease Prediction System',
+    selected = option_menu('Healthcare Disease Prediction System',
 
                            ['Diabetes Prediction',
                             'Heart Disease Prediction',
@@ -36,7 +38,7 @@ with st.sidebar:
 if selected == 'Diabetes Prediction':
 
     # page title
-    st.title('Diabetes Prediction using ML')
+    st.title('Diabetes Risk Prediction using Machine Learning')
 
     # getting the input data from the user
     col1, col2, col3 = st.columns(3)
@@ -91,7 +93,7 @@ if selected == 'Diabetes Prediction':
 if selected == 'Heart Disease Prediction':
 
     # page title
-    st.title('Heart Disease Prediction using ML')
+    st.title('Heart Disease Risk Prediction using Machine Learning')
 
     col1, col2, col3 = st.columns(3)
 
@@ -158,7 +160,7 @@ if selected == 'Heart Disease Prediction':
 if selected == "Parkinsons Prediction":
 
     # page title
-    st.title("Parkinson's Disease Prediction using ML")
+    st.title("Parkinson's Disease Risk Prediction using Machine Learning")
 
     col1, col2, col3, col4, col5 = st.columns(5)
 
