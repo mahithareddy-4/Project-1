@@ -51,9 +51,4 @@ streamlit run app.py
 * Cloud deployment
 * Enhanced model performance
 
-## Author
-
-Mahitha Reddy
-
-B.Tech Data Science
 
